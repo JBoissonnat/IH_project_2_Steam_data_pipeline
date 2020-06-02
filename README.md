@@ -1,5 +1,7 @@
 # Ironhack project 2 Steam data pipeline
 
+![GitHub Logo](https://colorsunited.eu/content/images/2018/06/steam-banner-1-.jpg)
+
 ### Project Description
 
 The goal was to clean a steam database found on kaggle, to make it more usable, and to make simple statistics about it. And write the code as data pipeline.
