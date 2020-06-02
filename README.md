@@ -1,10 +1,8 @@
-# project_2_data_pipeline_steam_dataset
-Repository for the 2nd project of Ironhack on data pipeline. This project is on a steam database
-
+# Ironhack project 2 Steam data pipeline
 
 ### Project Description
 
-The goal was to clean a steam database found on kaggle, to make it more usable, and to make simple statistics about it.
+The goal was to clean a steam database found on kaggle, to make it more usable, and to make simple statistics about it. And write the code as data pipeline.
 
 First I decided to focus on simple and general trends to represents with the dataset. The number of games per release date seemed obvious, and
 for the distribution of games between free and paying, by genre, it seemed interesting and challenging since it grouped the dataframe by 2 columns.
