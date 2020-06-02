@@ -1,14 +1,22 @@
 # project_2_data_pipeline_steam_dataset
 Repository for the 2nd project of Ironhack on data pipeline. This project is on a steam database
 
-### Process to create the pipeline
 
-# Definition of the objective to analyze the data
+### Project Description
+
+The goal was to clean a steam database found on kaggle, to make it more usable, and to make simple statistics about it.
 
 First I decided to focus on simple and general trends to represents with the dataset. The number of games per release date seemed obvious, and
 for the distribution of games between free and paying, by genre, it seemed interesting and challenging since it grouped the dataframe by 2 columns.
 
-# Cleaning
+### Libraries
+
+- os
+- pandas
+- numpy
+- regex
+
+### Cleaning
 
 I started cleaning the column genre. It was a quite difficult to find a way to only get one genre per game, and probably not the best option but I
 went for it anyway. I tried to get all the unique genre for the whole column but owing to their number I stood with "only" 12 (+ unknown) unique values.
@@ -25,7 +33,7 @@ For the original_price column, my objective was to get a 2 values column with "f
 in the discount_price column, when it had a price. Eventually I replaced every price with "paying", as much free mentions as possible as "free" and the rest as
 "missing_info".
 
-# Selecting columns and removing rows
+### Selecting columns and removing rows
 
 I then selected the 5 columns that I needed ["types", "name", "release_date", "genre", "original_price"], and removed rows :
 - removed the NaN and "bundle"/"sub" rows for the column types
@@ -36,7 +44,7 @@ I then selected the 5 columns that I needed ["types", "name", "release_date", "g
 
 After this step, the dataframe went from 40833 rows and 20 columns to 34150 rows and 5 columns.
 
-# Performing the analysis
+### Performing the analysis
 
 First I did the analysis for the number of games per years ; I simply grouped by release_date and aggregated by count, ordered by release_date and select the 10 first.
 For the second analysis on the distribution of games between free and paying by genre, I grouped by genre and by original_price, used an additional column filled with 
